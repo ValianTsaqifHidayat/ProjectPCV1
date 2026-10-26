@@ -9,7 +9,7 @@ K5 = np.ones((5, 5), np.uint8)
 yy, xx = np.mgrid[-R:R + 1, -R:R + 1]
 DISK = xx ** 2 + yy ** 2 <= R * R                         # ball footprint used for collision checks
 FONT = cv2.FONT_HERSHEY_SIMPLEX
-GAME_WIN, MASK_WIN, CTRL_WIN = "BOUNCE ON IT", "Mask", "Controls"
+GAME_WIN, MASK_WIN, CTRL_WIN = "BALL GUIDE", "Mask", "Controls"
 
 try:
     HERE = os.path.dirname(os.path.abspath(__file__))
@@ -263,7 +263,7 @@ def main():
             cv2.circle(img, (int(p[0]), int(p[1])), R, (255, 255, 255), -1, cv2.LINE_AA)
             cv2.putText(img, f"SCORE {score}   LIVES {lives}", (10, 28), FONT, 0.75, (255, 255, 255), 2, cv2.LINE_AA)
         else:
-            label(img, "BOUNCE ON IT" if state == "menu" else f"GAME OVER  -  SCORE {score}", 110, 1.1, (255, 230, 0), 3)
+            label(img, "BALL GUIDE" if state == "menu" else f"GAME OVER  -  SCORE {score}", 110, 1.1, (255, 230, 0), 3)
             for txt, c, r, a in btns:
                 draw_button(img, txt, c, r, hold.get(a, 0.0))
             label(img, "hold glove over button for 1s (or press SPACE / 1 / 2)  |  S = settings", H - 30, 0.5, (200, 200, 200), 1)
