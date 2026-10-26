@@ -1,8 +1,8 @@
-# BOUNCE ON IT
+# BALL GUIDE
 
 ## 1. Deskripsi Game
 
-Bounce On It adalah game interaktif berbasis computer vision yang menggunakan kamera untuk mendeteksi gerakan objek berwarna kuning, seperti sarung tangan. Objek tersebut berfungsi sebagai paddle untuk memantulkan bola menuju target.
+Ball Guide adalah game interaktif berbasis computer vision yang menggunakan kamera untuk mendeteksi gerakan objek berwarna kuning, seperti sarung tangan. Objek tersebut berfungsi sebagai paddle untuk memantulkan bola menuju target.
 
 Game ini dibuat menggunakan Python, OpenCV, dan NumPy. Pemain mengontrol permainan melalui gerakan tangan di depan kamera tanpa perlu menggunakan perangkat kontrol fisik untuk mekanisme utama permainan.
 
